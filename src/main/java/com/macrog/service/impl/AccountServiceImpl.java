@@ -17,28 +17,24 @@ public class AccountServiceImpl implements IAccountService {
 
     @Autowired
     IAccountDAO accountDAO;
+
     @Override
-    public int add(Account account) {
-        return accountDAO.add(account);
+    public List<Account> findAll() {
+        return accountDAO.findAll();
     }
 
     @Override
-    public int update(Account account) {
-        return accountDAO.update(account);
+    public Account findOne(int id) {
+        return accountDAO.findOne(id);
     }
 
     @Override
-    public int delete(int id) {
-        return accountDAO.delete(id);
+    public Account saveAndFlush(Account account) {
+        return accountDAO.saveAndFlush(account);
     }
 
     @Override
-    public Account findAccountById(int id) {
-        return accountDAO.findAccountById(id);
-    }
-
-    @Override
-    public List<Account> findAccountList() {
-        return accountDAO.findAccountList();
+    public Account save(Account account) {
+        return accountDAO.save(account);
     }
 }

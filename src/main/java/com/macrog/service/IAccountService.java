@@ -10,14 +10,12 @@ import java.util.List;
  */
 public interface IAccountService {
 
-    int add(Account account);
 
-    int update(Account account);
+    List<Account> findAll();
 
-    int delete(int id);
+    Account findOne(int id);
 
-    Account findAccountById(int id);
+    Account saveAndFlush(Account account);
 
-    List<Account> findAccountList();
-
+    Account save(Account account);
 }

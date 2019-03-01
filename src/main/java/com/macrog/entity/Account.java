@@ -1,10 +1,18 @@
 package com.macrog.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * @author guohong
  * @date 2019/3/1
  */
+@Entity
 public class Account {
+
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     private double money;

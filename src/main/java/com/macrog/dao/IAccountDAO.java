@@ -1,6 +1,7 @@
 package com.macrog.dao;
 
 import com.macrog.entity.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
@@ -8,14 +9,6 @@ import java.util.List;
  * @author guohong
  * @date 2019/3/1
  */
-public interface IAccountDAO {
-    int add(Account account);
-
-    int update(Account account);
-
-    int delete(int id);
-
-    Account findAccountById(int id);
-
-    List<Account> findAccountList();
+public interface IAccountDAO extends JpaRepository<Account,Integer> {
+    
 }
